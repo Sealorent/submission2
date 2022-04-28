@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.story.detail.DetailStoryActivity">
+
+    <ImageView
+        android:id="@+id/imgStoryThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        tools:src="@color/colorGrey"
+        android:transitionName="thumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvStoryTitle"
+        tools:text="Story Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:textSize="@dimen/dimen_24sp"
+        android:transitionName="title"
+        app:layout_constraintTop_toBottomOf="@id/imgStoryThumbnail"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/StoryTextContent.Title"/>
+
+    <TextView
+        android:id="@+id/tvStoryDesc"
+        tools:text="@string/label_lorem_ipsum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transitionName="description"
+        app:layout_constraintTop_toBottomOf="@id/tvStoryTitle"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/imgStoryThumbnail"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
